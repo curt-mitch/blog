@@ -37,8 +37,8 @@ var margin = {
       bottom: 30,
       left: 50
     },
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    width = 640 - margin.left - margin.right,
+    height = 310 - margin.top - margin.bottom;
 
 var x = d3.scale.linear()
     .range([0, width]);
@@ -92,7 +92,7 @@ svg.append("path")
 function getData() {
 
 // loop to populate data array with
-// probabily - quantile pairs
+// probability - quantile pairs
   for (var i = 0; i < 100000; i++) {
     var q = normal(); // calc random draw from normal dist
     var p = gaussian(q); // calc prob of rand draw
